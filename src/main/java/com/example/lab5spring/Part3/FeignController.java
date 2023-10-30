@@ -33,6 +33,13 @@ public class FeignController {
         return "Time taken to complete 10 async requests: " + (endTime - startTime) + " milliseconds";
 
     }
+
+    @GetMapping("/ReturnList")
+    ArrayList<ToDoResponse> FetchAll(){
+        return feignService.FetchAll();
+    }
+
+
     @GetMapping("/feign2")
     public ToDoResponse GetTodo() throws Exception {
 
