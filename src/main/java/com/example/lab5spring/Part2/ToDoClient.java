@@ -1,0 +1,11 @@
+package com.example.lab5spring.Part2;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@FeignClient(name = "jsonplaceholder", url = "https://jsonplaceholder.typicode.com")
+public interface ToDoClient {
+
+    @GetMapping("/todos/1")
+    ToDoResponse fetchData();
+}
