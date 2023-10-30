@@ -1,4 +1,4 @@
-package com.example.lab5spring.Part2;
+package com.example.lab5spring.Part3;
 
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -31,6 +31,19 @@ public class FeignController {
         long endTime = System.currentTimeMillis();
 
         return "Time taken to complete 10 async requests: " + (endTime - startTime) + " milliseconds";
+
+    }
+
+    @GetMapping("/ReturnList")
+    ArrayList<ToDoResponse> FetchAll(){
+        return feignService.FetchAll();
+    }
+
+
+    @GetMapping("/feign2")
+    public ToDoResponse GetTodo196() throws Exception {
+
+        return feignService.fetchData2();
 
     }
 }

@@ -1,4 +1,4 @@
-package com.example.lab5spring.Part2;
+package com.example.lab5spring.Part3;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
