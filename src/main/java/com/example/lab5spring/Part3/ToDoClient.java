@@ -13,4 +13,7 @@ public interface ToDoClient {
 
     @GetMapping("/todos/196")
     ToDoResponse fetchData2();
+
+    @GetMapping("/todos")
+    ArrayList<ToDoResponse> fetchAllData();
 }
