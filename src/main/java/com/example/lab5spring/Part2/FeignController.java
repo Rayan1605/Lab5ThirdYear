@@ -25,5 +25,12 @@ public class FeignController {
             futures.add(future);
         }
 
+        CompletableFuture<Void> allOf = CompletableFuture.allOf(futures.toArray(new CompletableFuture[0]));
+
+        allOf.get();// wait for all futures to complete
+        long endTime = System.currentTimeMillis();
+
+        return "Time taken to complete 10 async requests: " + (endTime - startTime) + " milliseconds";
+
     }
 }
