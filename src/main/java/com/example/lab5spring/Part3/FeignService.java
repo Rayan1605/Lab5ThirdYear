@@ -22,5 +22,27 @@ public class FeignService {
 
     }
 
+    public ToDoResponse fetchData2() {
+ToDoResponse toDoResponse = toDoClient.fetchData2();
+        System.out.println(toDoResponse);
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return toDoResponse;
+    }
+
+    public ArrayList<ToDoResponse> FetchAll(){
+        ArrayList<ToDoResponse> toDoResponse = toDoClient.fetchAllData();
+        System.out.println(toDoResponse);
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return toDoResponse;
+    }
+
 
 }
