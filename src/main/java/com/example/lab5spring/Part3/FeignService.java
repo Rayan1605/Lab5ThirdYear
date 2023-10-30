@@ -1,7 +1,9 @@
-package com.example.lab5spring.Part2;
+package com.example.lab5spring.Part3;
 
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
 
 @Service
 @AllArgsConstructor
@@ -19,4 +21,6 @@ public class FeignService {
         return toDoResponse;
 
     }
+
+
 }
