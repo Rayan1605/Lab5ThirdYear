@@ -41,7 +41,7 @@ public class FeignController {
 
 
     @GetMapping("/feign2")
-    public ToDoResponse GetTodo() throws Exception {
+    public ToDoResponse GetTodo196() throws Exception {
 
 
     }
