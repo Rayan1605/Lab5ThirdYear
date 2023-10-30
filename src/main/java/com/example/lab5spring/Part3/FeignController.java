@@ -43,6 +43,7 @@ public class FeignController {
     @GetMapping("/feign2")
     public ToDoResponse GetTodo196() throws Exception {
 
+        return feignService.fetchData2();
 
     }
 }
